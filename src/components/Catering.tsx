@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Catering = () => {
   const { t } = useLanguage();
@@ -32,9 +33,9 @@ const Catering = () => {
               {t('catering.description3')}
             </p>
             <div className="flex justify-center md:justify-start mt-6">
-              <a href="/contact" className="btn-primary">
+              <Link to="/contact" className="btn-primary">
                 {t('catering.cta')}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
