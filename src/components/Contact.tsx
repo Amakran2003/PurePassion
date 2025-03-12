@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Clock, Car } from 'lucide-react';
+import { MapPin, Phone, Clock, Car, Github, Linkedin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Contact = () => {
@@ -86,6 +86,49 @@ const Contact = () => {
             </form>
           </div>
         </div>
+        
+        {/* Developer Information Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-16 pt-10 border-t border-gray-200"
+        >
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <div className="w-32 h-32 rounded-full overflow-hidden shadow-xl">
+              <img 
+                src="https://avatars.githubusercontent.com/u/145991267?v=4" 
+                alt="Abderrazaq MAKRAN"
+                className="w-full h-full object-cover" 
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-semibold text-primary mb-2">{t('developer.title')}</h3>
+              <p className="mb-4 text-text">{t('developer.role')}</p>
+              <div className="flex justify-center md:justify-start space-x-4">
+                <a 
+                  href="https://github.com/Amakran2003" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-secondary hover:text-primary transition-colors"
+                >
+                  <Github className="w-5 h-5" />
+                  <span>{t('developer.github')}</span>
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/abderrazaq-makran?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8qaZ0UJXTjqa1bxj%2Fpr8hg%3D%3D" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-secondary hover:text-primary transition-colors"
+                >
+                  <Linkedin className="w-5 h-5" />
+                  <span>{t('developer.linkedin')}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );

@@ -91,5 +91,10 @@
   "footer.hours.title": "Hours",
   "footer.hours.value": "Monday - Wednesday: evenings only\nThursday - Saturday: lunch and dinner\nLunch by reservation for groups",
   "footer.contact.title": "Contact",
-  "footer.copyright": "All rights reserved."
+  "footer.copyright": "All rights reserved.",
+  
+  "developer.title": "Made by Abderrazaq MAKRAN",
+  "developer.role": "Full Stack Web Developer",
+  "developer.github": "GitHub",
+  "developer.linkedin": "LinkedIn"
 }

@@ -91,5 +91,10 @@
   "footer.hours.title": "Horaires",
   "footer.hours.value": "Lundi - Mercredi: soir uniquement\nJeudi - Samedi: midi et soir\nMidi sur réservation pour les groupes",
   "footer.contact.title": "Contact",
-  "footer.copyright": "Tous droits réservés."
+  "footer.copyright": "Tous droits réservés.",
+  
+  "developer.title": "Fait par Abderrazaq MAKRAN",
+  "developer.role": "Développeur Web Full Stack",
+  "developer.github": "GitHub",
+  "developer.linkedin": "LinkedIn"
 }
