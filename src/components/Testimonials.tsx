@@ -1,32 +1,35 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Star } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Testimonials = () => {
+  const { t, language } = useLanguage();
+  
   const testimonials = [
     {
       name: 'Bea T.',
-      text: 'Le meilleur couscous et de loin !! Nous avons pris un coucous poulet et un agneau + merguez Quel régal !! Très bien assaisonné, du parfum, du goût !!! Plus l\'amabilité du personnel A y retourner vite :-)',
+      textKey: 'testimonials.reviews.bea',
       rating: 5
     },
     {
       name: 'Lucie F.',
-      text: 'Couscous royal !!! Nous avions envie de manger un couscous... nous ne sommes pas du tout déçu !! Une semoule ultra fine, des légumes savoureux, les viandes délicieuses, sans oublier les petits raisins !! Et un service très agréable pour finir, nous reviendrons gouter d\'autres plats',
+      textKey: 'testimonials.reviews.lucie',
       rating: 5
     },
     {
       name: 'S0phiepaine',
-      text: 'Excellent ! Plats savoureux, service tres aimable et bien situe sur une des plus belles rues pietonnes de la ville.',
+      textKey: 'testimonials.reviews.sophie',
       rating: 5
     },
     {
       name: 'JACOSTEPH',
-      text: 'Un bon moment. Rentré par hasard, nous avons passé un super moment. Un tajine agneaux poire amande exemplaire. Un très bon moment.',
+      textKey: 'testimonials.reviews.jacosteph',
       rating: 5
     },
     {
       name: 'P45560',
-      text: 'Belle découverte. Nous etions naufragés... le restaurant où je souhaitais aller diner était fermé depuis...plusieurs années. Nous avons marché sans trop savoir où aller. Une amie a eu la fabuleuse idée de consulter internet pour trouver un restaurant oriental ouvert. Nous avons donc appelé très tardivement le restaurant Pure Passion et ils nous ont accepté après 22h. Nous avons découvert une cuisine marocaine très riche en saveur et un accueil des plus chaleureux. Sûr, nous reviendrons et nous en parlons. Très belle année à Pure Passion.',
+      textKey: 'testimonials.reviews.p45560',
       rating: 5
     }
   ];
@@ -77,7 +80,7 @@ const Testimonials = () => {
         transition={{ duration: 0.8 }}
         className="max-w-4xl mx-auto"
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Avis Clients</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">{t('testimonials.title')}</h2>
         
         <div className="relative">
           {/* Container with fixed height */}
@@ -101,7 +104,7 @@ const Testimonials = () => {
                     <Star key={i} className="w-5 h-5 fill-gold text-gold" />
                   ))}
                 </div>
-                <p className="mb-6 text-lg italic text-center">"{testimonials[currentIndex].text}"</p>
+                <p className="mb-6 text-lg italic text-center">"{t(testimonials[currentIndex].textKey)}"</p>
                 <p className="font-semibold text-center text-primary">- {testimonials[currentIndex].name}</p>
               </motion.div>
             </AnimatePresence>

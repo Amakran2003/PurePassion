@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 const AboutPreview = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="about-preview" className="section-container">
       <motion.div
@@ -11,17 +14,17 @@ const AboutPreview = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Un Peu de Nous</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('about.title')}</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <p className="text-lg mb-4">
-              Le traiteur Pure Passion est un traiteur marocain situé au cœur du vieux centre-ville d'Orléans, dans la rue de Bourgogne.
+              {t('about.description1')}
             </p>
             <p className="text-lg mb-6">
-              C'est en 1997 que M. et Mme Bennis ouvrent leur 1er restaurant, vous proposant une cuisine authentique, colorée et savoureuse.
+              {t('about.description2')}
             </p>
             <Link to="/about" className="inline-flex items-center text-primary font-semibold hover:text-primary-light transition-colors">
-              En savoir plus <ArrowRight className="ml-2 w-4 h-4" />
+              {t('about.readmore')} <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
           <div className="relative h-[300px] md:h-full min-h-[300px]">

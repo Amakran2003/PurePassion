@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import About from '../components/About';
+import { useLanguage } from '../context/LanguageContext';
 
 const AboutPage = () => {
+  const { t } = useLanguage();
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -14,7 +17,7 @@ const AboutPage = () => {
       <About />
       <section className="section-container bg-white dark:bg-primary-dark/50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-terracotta text-center">Notre Équipe</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-terracotta text-center">{t('about.team.title')}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
@@ -25,7 +28,7 @@ const AboutPage = () => {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">Chef Mehdi</h3>
-              <p className="text-olive">Chef Exécutif</p>
+              <p className="text-olive">{t('about.team.chef')}</p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
@@ -36,7 +39,7 @@ const AboutPage = () => {
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">Sofia</h3>
-              <p className="text-olive">Chef Pâtissière</p>
+              <p className="text-olive">{t('about.team.pastry')}</p>
             </div>
           </div>
         </div>

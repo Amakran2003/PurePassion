@@ -3,12 +3,15 @@ import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
+import { useLanguage } from '../context/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,11 +22,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Accueil', href: '/' },
-    { name: 'Menu', href: '/menu' },
-    { name: 'À propos', href: '/about' },
-    { name: 'Galerie', href: '/gallery' },
-    { name: 'Contact', href: '/contact' },
+    { name: t('nav.home'), href: '/' },
+    { name: t('nav.menu'), href: '/menu' },
+    { name: t('nav.about'), href: '/about' },
+    { name: t('nav.gallery'), href: '/gallery' },
+    { name: t('nav.contact'), href: '/contact' },
   ];
 
   return (
@@ -44,7 +47,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -61,16 +64,26 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            
             <Link 
               to="/contact" 
               className="px-6 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary-light transition-all shadow-warm"
             >
-              Réserver
+              {t('nav.reserve')}
             </Link>
+            
+            {/* Language Toggle */}
+            <LanguageToggle className={clsx(
+              isHomePage && !isScrolled ? "text-white" : "text-text"
+            )} />
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile Menu Button with Language Toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageToggle minimal={true} className={clsx(
+              isHomePage && !isScrolled ? "text-white" : "text-text"
+            )} />
+            
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md hover:bg-secondary-light transition-colors"
@@ -109,7 +122,7 @@ const Navbar = () => {
                 className="block px-3 py-2 mt-2 rounded-md text-base font-medium bg-primary text-white hover:bg-primary-light transition-all"
                 onClick={() => setIsOpen(false)}
               >
-                Réserver
+                {t('nav.reserve')}
               </Link>
             </div>
           </motion.div>

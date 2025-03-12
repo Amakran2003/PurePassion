@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Gallery = () => {
+  const { t } = useLanguage();
   // Use a state to store image paths that will have the base path prepended
   const [imagePaths, setImagePaths] = useState<{url: string, alt: string}[]>([]);
   
@@ -64,7 +66,7 @@ const Gallery = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Notre Galerie</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('gallery.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {imagePaths.map((image, index) => (
             <motion.div

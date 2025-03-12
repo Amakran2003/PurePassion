@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="home" className="relative h-screen flex items-center justify-center">
       {/* Background Image */}
@@ -25,19 +28,19 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
-            Pure Passion
+            {t('hero.title')}
           </h1>
           <p className="text-xl md:text-2xl font-body mb-4">
-            Traiteur Marocain à Orléans
+            {t('hero.subtitle')}
           </p>
           <p className="text-lg md:text-xl font-body mb-8">
-            Un plongeon dans la culture marocaine. Au plaisir de vous accueillir.
+            {t('hero.description')}
           </p>
           <a
             href="#reservation"
             className="btn-primary inline-block"
           >
-            Commander
+            {t('hero.cta')}
           </a>
         </motion.div>
       </div>

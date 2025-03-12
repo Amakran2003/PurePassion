@@ -5,8 +5,10 @@ import AboutPreview from '../components/AboutPreview';
 import Testimonials from '../components/Testimonials';
 import Catering from '../components/Catering';
 import SplashScreen from '../components/SplashScreen';
+import { useLanguage } from '../context/LanguageContext';
 
 const HomePage = () => {
+  const { t } = useLanguage();
   const [showSplash, setShowSplash] = useState(() => {
     // Only show splash if this is the first visit in this session
     return !sessionStorage.getItem('splashShown');
@@ -41,22 +43,22 @@ const HomePage = () => {
           <Hero />
           <section className="section-container bg-white">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">Bienvenue à Pure Passion</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">{t('home.welcome.title')}</h2>
               <p className="text-lg mb-8">
-                « Goûtez à l'authenticité de la cuisine Orientale, Redécouvrez la cuisine Occidentale...»
+                {t('home.welcome.description')}
               </p>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="p-6 bg-secondary-light rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold mb-3 text-primary">Cuisine Authentique</h3>
-                  <p>Des recettes traditionnelles marocaines transmises de génération en génération</p>
+                  <h3 className="text-xl font-semibold mb-3 text-primary">{t('home.feature1.title')}</h3>
+                  <p>{t('home.feature1.description')}</p>
                 </div>
                 <div className="p-6 bg-secondary-light rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold mb-3 text-primary">À Emporter</h3>
-                  <p>Commandez vos plats préférés à emporter pour les déguster chez vous</p>
+                  <h3 className="text-xl font-semibold mb-3 text-primary">{t('home.feature2.title')}</h3>
+                  <p>{t('home.feature2.description')}</p>
                 </div>
                 <div className="p-6 bg-secondary-light rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-semibold mb-3 text-primary">Service Traiteur</h3>
-                  <p>Organisation d'évènements et location de salle jusqu'à 30 personnes</p>
+                  <h3 className="text-xl font-semibold mb-3 text-primary">{t('home.feature3.title')}</h3>
+                  <p>{t('home.feature3.description')}</p>
                 </div>
               </div>
             </div>

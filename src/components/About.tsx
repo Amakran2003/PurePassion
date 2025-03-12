@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="section-container">
       <motion.div
@@ -10,17 +13,17 @@ const About = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Notre Histoire</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('about.history.title')}</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <p className="text-lg mb-4">
-              Le traiteur Pure Passion est un traiteur marocain situé au cœur du vieux centre-ville d'Orléans, dans la rue de Bourgogne.
+              {t('about.description1')}
             </p>
             <p className="text-lg mb-4">
-              C'est en 1997 que M. et Mme Bennis ouvrent leur 1er restaurant : grâce à leur savoir-faire, ils vous feront découvrir une cuisine orientale authentique et colorée, mais aussi une cuisine occidentale riche et savoureuse.
+              {t('about.description3')}
             </p>
             <p className="text-lg">
-              Tous nos plats et préparations sont faits maison avec des produits frais. Couscous tajines à emporter sur commande, et service traiteur pour organiser un repas marocain chez soi.
+              {t('about.description4')}
             </p>
           </div>
           <div className="relative h-[300px] md:h-full min-h-[300px]">
