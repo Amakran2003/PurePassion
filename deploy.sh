@@ -10,14 +10,20 @@ temp_dir=$(mktemp -d)
 # Copy the built files to the temporary directory
 cp -r dist/* $temp_dir/
 
+# Create a .nojekyll file to prevent Jekyll processing
+touch $temp_dir/.nojekyll
+
 # Switch to gh-pages branch (create if it doesn't exist)
 git checkout gh-pages 2>/dev/null || git checkout -b gh-pages
 
-# Remove existing files
-rm -rf *
+# Remove existing files but keep .git directory
+find . -maxdepth 1 ! -name .git ! -name . -exec rm -rf {} \;
 
 # Copy the built files from the temporary directory
-cp -r $temp_dir/* .
+cp -r $temp_dir/* $temp_dir/.nojekyll .
+
+# Copy the root-index.html as index.html
+cp $temp_dir/index.html ./index.html
 
 # Remove the temporary directory
 rm -rf $temp_dir

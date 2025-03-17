@@ -1,13 +1,13 @@
-# Pure Passion - Traiteur Marocain à Orléans
+# Le Safran Oriental - Traiteur Marocain à Paris
 
 ## À Propos
-Pure Passion est un restaurant et traiteur marocain authentique situé au cœur du vieux centre-ville d'Orléans, dans la rue de Bourgogne. Fondé en 1997 par M. et Mme Bennis, notre établissement propose une cuisine orientale colorée et savoureuse ainsi qu'une cuisine occidentale riche et raffinée.
+Le Safran Oriental est un restaurant et traiteur marocain authentique situé au cœur du 10ème arrondissement de Paris, dans la rue du Faubourg Saint-Denis. Fondé en 2010 par M. et Mme. Lahlou, notre établissement propose une cuisine orientale colorée et savoureuse ainsi que des influences méditerranéennes modernes.
 
 ## Notre Cuisine
 Tous nos plats et préparations sont faits maison avec des produits frais. Notre carte propose:
 - **Couscous Traditionnels**: Plusieurs variétés avec semoule fine et légumes de saison
-- **Tajines Authentiques**: Agneau, poulet et options végétariennes
-- **Pâtisseries Orientales**: Cornes de gazelle, makroud, baklava
+- **Tajines Authentiques**: Agneau aux pruneaux, poulet au citron confit, kefta aux œufs
+- **Pâtisseries Orientales**: Cornes de gazelle, baklavas, makroud, ghriba
 - **Service Traiteur**: Pour vos événements privés et professionnels
 
 ## Caractéristiques du Site Web

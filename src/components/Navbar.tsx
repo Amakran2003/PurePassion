@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="font-display text-2xl font-bold text-primary">
-              Pure Passion
+              Le Safran Oriental
             </Link>
           </div>
 

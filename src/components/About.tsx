@@ -28,9 +28,13 @@ const About = () => {
           </div>
           <div className="relative h-[300px] md:h-full min-h-[300px]">
             <img
-              src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&q=80"
-              alt="Intérieur du restaurant Pure Passion"
+              src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Intérieur du restaurant Le Safran Oriental"
               className="absolute inset-0 w-full h-full object-cover rounded-lg"
+              loading="eager"
+              onError={(e) => {
+                e.currentTarget.src = "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+              }}
             />
           </div>
         </div>

@@ -18,7 +18,7 @@ const SplashScreen = () => {
         }}
       >
         <h1 className="font-display text-5xl md:text-7xl font-bold text-primary mb-4">
-          Pure Passion
+          Le Safran Oriental
         </h1>
         <motion.div 
           className="h-1 w-24 bg-primary rounded-full"
@@ -27,7 +27,7 @@ const SplashScreen = () => {
           transition={{ duration: 1, delay: 0.4 }}
         />
         <p className="mt-4 text-text italic">
-          Cuisine orientale & occidentale
+          Cuisine orientale & méditerranéenne
         </p>
       </motion.div>
     </motion.div>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
@@ -36,29 +37,31 @@ const Hero = () => {
           <p className="text-lg md:text-xl font-body mb-8">
             {t('hero.description')}
           </p>
-          <a
-            href="#reservation"
+          <Link
+            to="/contact"
             className="btn-primary inline-block"
           >
             {t('hero.cta')}
-          </a>
+          </Link>
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          duration: 1.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      >
-        <ChevronDown className="w-8 h-8 text-white" />
-      </motion.div>
+      {/* Scroll Indicator - Fixed the centering */}
+      <div className="absolute bottom-8 w-full flex justify-center z-10">
+        <motion.div
+          animate={{
+            y: [0, 10, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="flex items-center justify-center"
+        >
+          <ChevronDown className="w-10 h-10 text-white" />
+        </motion.div>
+      </div>
     </section>
   );
 };

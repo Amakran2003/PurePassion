@@ -17,8 +17,8 @@ const Catering = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?auto=format&fit=crop&q=80" 
-              alt="Service Traiteur" 
+              src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&q=80" 
+              alt="Service Traiteur - Buffet marocain" 
               className="rounded-lg shadow-lg w-full h-full object-cover"
             />
           </div>

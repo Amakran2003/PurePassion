@@ -22,23 +22,31 @@ const AboutPage = () => {
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80"
-                  alt="Chef Mehdi"
+                  src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Chef Karim"
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+                  }}
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Chef Mehdi</h3>
+              <h3 className="text-xl font-semibold mb-2">Chef Karim</h3>
               <p className="text-olive">{t('about.team.chef')}</p>
             </div>
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&q=80"
-                  alt="Sofia"
+                  src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Amina"
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1592498546551-222538011a35?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+                  }}
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Sofia</h3>
+              <h3 className="text-xl font-semibold mb-2">Amina</h3>
               <p className="text-olive">{t('about.team.pastry')}</p>
             </div>
           </div>

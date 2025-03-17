@@ -98,7 +98,7 @@ const Contact = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <div className="w-32 h-32 rounded-full overflow-hidden shadow-xl">
               <img 
-                src="https://avatars.githubusercontent.com/u/145991267?v=4" 
+                src="https://avatars.githubusercontent.com/u/145991267?v=4?auto=format&fit=crop&q=80" 
                 alt="Abderrazaq MAKRAN"
                 className="w-full h-full object-cover" 
               />
@@ -117,7 +117,7 @@ const Contact = () => {
                   <span>{t('developer.github')}</span>
                 </a>
                 <a 
-                  href="https://www.linkedin.com/in/abderrazaq-makran?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8qaZ0UJXTjqa1bxj%2Fpr8hg%3D%3D" 
+                  href="https://www.linkedin.com/in/abderrazaq-makran?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVTcqPKFJS3OZ%2BRJhnF8JbA%3D%3D" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-secondary hover:text-primary transition-colors"
