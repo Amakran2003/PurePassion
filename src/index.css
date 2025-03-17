@@ -1,3 +1,8 @@
+/* 
+ * This file uses Tailwind CSS directives
+ * VSCode may show errors for @tailwind and @apply directives
+ * They are valid in the context of a Tailwind CSS project
+ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../context/LanguageContext';
-import MenuFilter from './menu/MenuFilter';
-import MenuCategory from './menu/MenuCategory';
-import { MenuItemProps } from './menu/MenuItem';
+import { useLanguage } from '../../context/LanguageContext';
+import MenuFilter from './MenuFilter';
+import MenuCategory from './MenuCategory';
+import { MenuItemProps } from './MenuItem';
 
 // Types pour notre menu
 interface MenuCategory {

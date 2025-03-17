@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Hero from '../components/Hero';
-import AboutPreview from '../components/AboutPreview';
-import Testimonials from '../components/Testimonials';
-import Catering from '../components/Catering';
-import SplashScreen from '../components/SplashScreen';
+import Hero from '../components/home/Hero';
+import AboutPreview from '../components/home/AboutPreview';
+import Testimonials from '../components/home/Testimonials';
+import Catering from '../components/home/Catering';
+import SplashScreen from '../components/home/SplashScreen';
 import { useLanguage } from '../context/LanguageContext';
 
 const HomePage = () => {

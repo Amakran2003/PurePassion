@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Clock, Car, Github, Linkedin } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../../context/LanguageContext';
 
 const Contact = () => {
   const { t } = useLanguage();

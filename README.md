@@ -35,7 +35,7 @@ Tous nos plats et préparations sont faits maison avec des produits frais. Notre
 ### Mise en place
 1. Clonez le dépôt:
    ```
-   git clone https://github.com/Amakran2003/PurePassion
+   git clone https://github.com/Amakran2003/SafranOriental
    cd purepassion
    ```
 

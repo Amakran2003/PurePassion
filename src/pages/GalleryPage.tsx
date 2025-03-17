@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import Gallery from '../components/Gallery';
+import Gallery from '../components/gallery/Gallery';
 
 const GalleryPage = () => {
   return (

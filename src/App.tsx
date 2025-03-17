@@ -1,7 +1,7 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './components/common/Navbar';
+import Footer from './components/common/Footer';
 import HomePage from './pages/HomePage';
 import MenuPage from './pages/MenuPage';
 import AboutPage from './pages/AboutPage';
