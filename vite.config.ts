@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // GitHub Pages deployment configuration
 export default defineConfig({
   plugins: [react()],
-  base: '/SafranOriental/', // Updated to match your actual GitHub Pages URL case
+  base: '/SafranOriental/', // Confirmed this matches the actual repository name
   build: {
     sourcemap: true, // Help with debugging issues
     outDir: 'dist',
